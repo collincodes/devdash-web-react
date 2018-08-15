@@ -1,0 +1,31 @@
+@import 'variables'
+
+// Global Styling ex. extra classes and default global styling
+.overlay
+  position: absolute
+  z-index: 2
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+
+// default styling
+html
+  font-size: 0.83vw
+  @media #{$hd}
+    font-size: 16px
+  body
+    font-family: $font1
+    a
+      color: $color1
+      &:hover, &:focus, &:visited
+        text-decoration: none
+        color: $color2
+    main
+      min-height: 100vh
+      +fb(stretch, center)
+      .body-container
+        width: 100%
+      #sidebar
+        width: 30rem
+        flex-shrink: 0

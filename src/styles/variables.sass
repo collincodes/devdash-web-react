@@ -1,0 +1,32 @@
+// colors
+$color1: #983737
+$color2: #a84c4c
+$color3: #d5d5d5
+
+$grey: #fbfbfb
+
+// media queries made easy
+$small: 'only screen and (max-width: 576px)'
+$medium: 'only screen and (max-width: 768px)'
+$large: 'only screen and (max-width: 1024px)'
+$xlarge: 'only screen and (max-width: 1250px)'
+$xxlarge: 'only screen and (max-width: 1440px)'
+$hd: 'only screen and (max-width: 1920px)'
+
+// fonts
+$font1: 'Lato', sans-serif
+
+// variables you should use
+=bg($a, $b)
+  background-size: $a
+  background-position: $b
+  background-repeat: no-repeat
+
+=gradient($a, $b, $c)
+  background: $b
+  background: linear-gradient($a, $b, $c)
+
+=fb($a, $b)
+  display: flex
+  align-items: $a
+  justify-content: $b
