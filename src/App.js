@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import './App.min.css';
 import Sidebar from './components/Sidebar'
+import './Data'
 
 class App extends Component {
   render() {
