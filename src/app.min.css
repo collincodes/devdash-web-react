@@ -1,2 +1,2 @@
 .overlay{position:absolute;z-index:2;height:100%;width:100%;top:0;left:0}html{font-size:.83vw}@media only screen and (max-width: 1920px){html{font-size:16px}}html body{font-family:"Lato",sans-serif}html body a{color:#983737}html body a:hover,html body a:focus,html body a:visited{text-decoration:none;color:#a84c4c}html body main{min-height:100vh;display:flex;align-items:stretch;justify-content:center}html body main .body-container{width:100%}html body main #sidebar{width:30rem;flex-shrink:0}#sidebar{position:relative;background-color:#983737;color:#fff}#sidebar a{color:#fff}
-/*# sourceMappingURL=App.min.css.map */
+/*# sourceMappingURL=app.min.css.map */

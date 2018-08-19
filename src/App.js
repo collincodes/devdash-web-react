@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import './App.min.css';
-import Sidebar from './components/Sidebar'
-import './Data'
+import './app.min.css';
+import { gitData } from './Data'
+import UserCard from './components/UserCard'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: {}
+    }
+  }
+
+  componentDidMount() {
+    gitData.call(this)
+  }
+
   render() {
+    const { user } = this.state
+
     return (
       <div>
         <Route exact path="/" render={() => (
           <main id="home">
             <div className="body-container">
-
+              <UserCard
+                data={ user }
+                />
             </div>
-            <Sidebar />
           </main>
         )}/>
         <Route path="/repos" render={() => (
@@ -21,7 +35,6 @@ class App extends Component {
             <div className="body-container">
 
             </div>
-            <Sidebar />
           </main>
         )}/>
       </div>

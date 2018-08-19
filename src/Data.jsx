@@ -41,6 +41,12 @@ dataFetch.use(({ request, options }, next) => {
   next();
 });
 
-dataFetch({ query }).then(res => {
-  console.log(res.data)
-})
+export function gitData() {
+  return dataFetch({ query })
+    .then(res => {
+      return res
+    })
+    .then(res => {
+      this.setState({ user: res.data.user })
+    })
+}
