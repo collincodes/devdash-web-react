@@ -1,0 +1,33 @@
+@import 'variables'
+
+#repositories
+  .heading
+    padding: 1rem 2rem
+    border-bottom: 1px solid $shadow
+  .repos
+    padding: 2rem
+    .list
+      height: 20rem
+      padding: 0
+      margin: 0
+      list-style: none
+      overflow: auto
+    .repo + .repo
+      padding-top: 1rem
+    .repo
+      a
+        display: block
+        color: black
+        padding: 1rem
+        border-radius: 5px
+        transition: 0.25s
+        &:hover
+          box-shadow: 0 0.5rem 1rem $shadow
+        .name
+          font-size: 1.25rem
+          font-weight: 300
+          margin-bottom: 0.5rem
+          color: $color1
+        .description
+          font-size: 0.85rem
+          color: #262626

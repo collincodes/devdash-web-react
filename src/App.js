@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import './app.min.css';
 import { gitData } from './Data'
 import UserCard from './components/UserCard'
+import Repositories from './components/Repositories'
 
 class App extends Component {
   constructor(props) {
@@ -29,11 +30,16 @@ class App extends Component {
     if (this.state.hasFinished) {
       return (
         <div>
-          <h1 className="title">Github Dashboard UI</h1>
+          <h1 className="title">GitHub Dashboard UI</h1>
           <Route exact path="/" render={() => (
               <main id="home">
-                <div className="top-container">
+                <div className="one">
                   <UserCard
+                    data={ user }
+                    />
+                </div>
+                <div className="two">
+                  <Repositories
                     data={ user }
                     />
                 </div>

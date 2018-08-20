@@ -14,13 +14,13 @@ class UserCard extends Component {
     return (
       <div id="userCard" className="card">
         <div className="top">
-          <img src={ avatarUrl } alt="My Github Avatar" />
           <span className="name">{ name }</span>
+          <img src={ avatarUrl } alt="My Github Avatar" />
         </div>
         <div className="bottom">
           <span className="bio">{ bio }</span>
           <span className="location">{ location }</span>
-          <span className="email">{ email }</span>
+          <a href={ "mailto:" + email } className="email">{ email }</a>
         </div>
       </div>
     );
