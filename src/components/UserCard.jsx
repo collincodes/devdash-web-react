@@ -5,16 +5,22 @@ class UserCard extends Component {
   render() {
     const { data } = this.props
     const user = { data }.data
+    const avatarUrl = user.avatarUrl
     const name = user.name
     const email = user.email
-    const avatarUrl = user.avatarUrl
+    const location = user.location
+    const bio = user.bio
 
     return (
-      <div className="card">
+      <div id="userCard" className="card">
         <div className="top">
           <img src={ avatarUrl } alt="My Github Avatar" />
-          <h1 className="name">{ name }</h1>
-          <h6 className="email">{ email }</h6>
+          <span className="name">{ name }</span>
+        </div>
+        <div className="bottom">
+          <span className="bio">{ bio }</span>
+          <span className="location">{ location }</span>
+          <span className="email">{ email }</span>
         </div>
       </div>
     );

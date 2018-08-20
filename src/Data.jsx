@@ -7,6 +7,7 @@ const query = `{
     avatarUrl
     name
     email
+    bio
     location
     repositories(first: 25) {
       edges {
@@ -45,8 +46,5 @@ export function gitData() {
   return dataFetch({ query })
     .then(res => {
       return res
-    })
-    .then(res => {
-      this.setState({ user: res.data.user })
     })
 }

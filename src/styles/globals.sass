@@ -11,21 +11,35 @@
 
 // default styling
 html
-  font-size: 0.83vw
+  font-size: 1vw
   @media #{$hd}
-    font-size: 16px
+    font-size: 14px
   body
     font-family: $font1
+    background-color: #fbfbfb
+    #root
+      +fb(flex-start, center)
+      padding: 0 10vw
+      min-height: 100vh
+      & > div
+        max-width: 65rem
+        width: 100%
+        & > .title
+          font-size: 1rem
+          font-weight: 400
+          padding: 1rem 0
+          text-align: center
+          border-bottom: 1px solid $shadow
+          margin-bottom: 3rem
+        .card
+          background-color: white
+          border-radius: 5px
+          border: none
+          box-shadow: 0px 3px 6px $shadow
     a
       color: $color1
       &:hover, &:focus, &:visited
         text-decoration: none
         color: $color2
-    main
-      min-height: 100vh
-      +fb(stretch, center)
-      .body-container
-        width: 100%
-      #sidebar
-        width: 30rem
-        flex-shrink: 0
+    span
+      display: block
