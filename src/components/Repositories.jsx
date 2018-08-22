@@ -5,6 +5,7 @@ class Repositories extends Component {
     const { data } = this.props
     const user = { data }.data
     const repos = user.repositories.edges
+    const date = new Date()
     const listRepos = repos.map((rep, i) =>
       <li key={ i } className="repo">
         <a href={ rep.node.url }>
@@ -15,7 +16,7 @@ class Repositories extends Component {
         </a>
       </li>
     )
-    console.log(repos)
+    console.log(date.getFullYear())
 
     return(
       <div id="repositories" className="card">

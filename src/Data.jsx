@@ -13,7 +13,6 @@ const query = `{
       edges {
         node {
           name
-          createdAt
           description
           url
           defaultBranchRef {
