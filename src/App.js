@@ -30,7 +30,7 @@ class App extends Component {
     if (this.state.hasFinished) {
       return (
         <div>
-          <h1 className="title">GitHub Dashboard UI</h1>
+          <h1 className="title">Development Dashboard UI</h1>
           <Route exact path="/" render={() => (
               <main id="home">
                 <div className="one">

@@ -37,7 +37,6 @@ dataFetch.use(({ request, options }, next) => {
     options.headers = {};  // Create the headers object if needed.
   }
   options.headers['authorization'] = 'Bearer ' + key;
-
   next();
 });
 
@@ -47,3 +46,23 @@ export function gitData() {
       return res
     })
 }
+
+export const socialMedia = [
+  {
+    'platform': 'LinkedIn',
+    'url': 'https://linkedin.com/in/cmdeveloped',
+    'icon': 'fab fa-linkedin-in'
+  }, {
+    'platform': 'Twitter',
+    'url': 'https://twitter.com/cmdeveloped',
+    'icon': 'fab fa-twitter'
+  }, {
+    'platform': 'Github',
+    'url': 'https://github.com/cmdeveloped',
+    'icon': 'fab fa-github'
+  }, {
+    'platform': 'CodePen',
+    'url': 'https://codepen.io/collinscode/',
+    'icon': 'fab fa-codepen'
+  }
+]
