@@ -5,7 +5,7 @@
     padding: 1rem 2rem
     border-bottom: 1px solid $shadow
   .repos
-    padding: 2rem
+    padding: 2rem 1rem
     position: relative
     .scrollBar
       position: absolute
@@ -15,45 +15,55 @@
       width: 5px
       background-color: $color2
       border-radius: 5px
-    .meta
-      +fb(center, space-between)
-      margin-bottom: 0.5rem
-      color: $color1
     .list
       height: 20rem
-      padding: 0
+      padding: 0 1rem 1rem
       margin: 0
       list-style: none
       overflow: auto
+      overflow-x: visible
+      +fb(stretch, space-between)
+      flex-wrap: wrap
       &::-webkit-scrollbar
         display: none
-    .repo + .repo
-      padding-top: 1rem
     .repo
+      width: calc(50% - 1rem)
+      background-color: white
+      border-radius: 5px
+      border: none
+      box-shadow: 0 5px 12px rgba(black, 0.05)
+      &:nth-child(n + 3)
+        margin-top: 2rem
       a
         display: block
-        color: black
-        padding: 1rem 0 2rem
+        color: $text
+        padding: 1rem 1rem 2rem
         border-radius: 5px
         transition: 0.25s
+        font-weight: 300
         &:hover
           .name
             &:after
-              width: 33%
+              width: 115%
+        .meta
+          margin-bottom: 1rem
+          +fb(center, space-between)
+          color: $color1
         .name
-          font-size: 1.25rem
-          margin-bottom: 0.5rem
+          font-size: 1rem
           position: relative
           color: $color1
           &:after
             content: ''
             position: absolute
-            bottom: 0
+            bottom: -0.33rem
             left: 0
             width: 0
             height: 1px
             background-color: $color1
-            transition: 0.25s
+            transition: 0.33s
+        .commits
+          font-size: 0.85rem
         .description
-          font-weight: 300
           color: #262626
+          font-size: 0.85rem

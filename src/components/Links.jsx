@@ -13,7 +13,9 @@ class Links extends Component {
 
     return(
       <div id="links" className="card">
-        <span className="heading">Development Links</span>
+        <header>
+          <span className="heading">Development Links</span>
+        </header>
         <div className="links">
           <ol className="list">
             { links }

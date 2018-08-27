@@ -20,7 +20,9 @@ class Repositories extends Component {
 
     return (
       <div id="repositories" className="card">
-        <span className="heading">Repositories</span>
+        <header>
+          <span className="heading">Repositories</span>
+        </header>
         <div className="repos">
           <ul className="list">
             { listRepos }

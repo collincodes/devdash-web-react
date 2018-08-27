@@ -15,6 +15,14 @@ const query = `{
           name
           description
           url
+          languages(first: 5) {
+            edges {
+              size
+              node {
+                name
+              }
+            }
+          }
           defaultBranchRef {
             target {
               ... on Commit {
@@ -54,7 +62,7 @@ export const socialMedia = [
     'icon': 'fab fa-linkedin-in'
   }, {
     'platform': 'Twitter',
-    'url': 'https://twitter.com/cmdeveloped',
+    'url': 'https://twitter.com/collinscode_',
     'icon': 'fab fa-twitter'
   }, {
     'platform': 'Github',

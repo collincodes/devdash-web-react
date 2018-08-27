@@ -5,6 +5,7 @@ import { gitData } from './Data'
 import UserCard from './components/UserCard'
 import Repositories from './components/Repositories'
 import Links from './components/Links'
+import Overview from './components/Overview'
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,11 @@ class App extends Component {
                 <Links />
               </div>
               <div className="two">
+                <Overview
+                  data={ user }
+                />
+              </div>
+              <div className="three">
                 <Repositories
                   data={ user }
                   />
