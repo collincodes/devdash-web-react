@@ -12,6 +12,7 @@ import UserCard from './components/UserCard'
 import Repositories from './components/Repositories'
 import Links from './components/Links'
 import Overview from './components/Overview'
+import Loading from './components/Loading'
 
 class App extends Component {
   constructor(props) {
@@ -59,18 +60,11 @@ class App extends Component {
               </div>
             </main>
           )}/>
-          <Route path="/repos" render={() => (
-            <main id="repos">
-              <div className="container">
-
-              </div>
-            </main>
-          )}/>
         </div>
       );
     } else {
       return (
-        <span>Loading...</span>
+        <Loading />
       )
     }
   }

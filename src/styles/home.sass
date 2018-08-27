@@ -4,5 +4,10 @@
   .one
     +fb(stretch, space-between)
     margin-bottom: 2rem
+    flex-wrap: wrap
     & > *
       width: calc(50% - 1rem)
+      @media #{$small}
+        width: 100%
+        &:first-child
+          margin-bottom: 2rem

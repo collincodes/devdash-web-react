@@ -34,6 +34,10 @@
       box-shadow: 0 5px 12px rgba(black, 0.05)
       &:nth-child(n + 3)
         margin-top: 2rem
+      @media #{$tweener}
+        width: 100%
+        &:nth-child(n + 2)
+          margin-top: 2rem
       a
         display: block
         color: $text

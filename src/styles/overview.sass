@@ -9,18 +9,34 @@
     padding: 2rem
     .statistics
       +fb(center, space-around)
+      flex-wrap: wrap
       & > *
         width: 33.33%
+        @media #{$small}
+          &:nth-child(1)
+            width: 100%
+            margin-bottom: 2rem
+          &:nth-child(n + 2)
+            width: 50%
       ul
         list-style: none
         padding: 0
         margin: 0
         +fb(center, center)
+        flex-wrap: wrap
         li
           +fb(center, flex-start)
           flex-direction: column
           font-weight: 300
           width: 25%
+          @media #{$large}
+            width: 50%
+            &:nth-of-type(n + 3)
+              margin-top: 1rem
+          @media #{$small}
+            width: 25%
+            &:nth-of-type(n + 3)
+              margin-top: 0
           .color
             height: 1.5rem
             width: 1.5rem

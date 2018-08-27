@@ -1,6 +1,6 @@
 import { createApolloFetch } from 'apollo-fetch'
 
-const key = '806637cd5237d19213ecde02ff075d9ac5a88f2a'
+const key = '8c9c548f272f945126691449d2e589014be74321'
 const uri = 'https://api.github.com/graphql'
 const query = `{
   user(login: cmdeveloped) {

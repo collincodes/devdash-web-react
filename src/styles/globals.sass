@@ -24,6 +24,8 @@ html
       +fb(flex-start, center)
       padding: 0 10vw 2rem
       min-height: 100vh
+      @media #{$medium}
+        padding: 0 2rem 2rem
       & > div
         max-width: 65rem
         width: 100%
@@ -41,6 +43,12 @@ html
           border-radius: 5px
           border: none
           box-shadow: 0px 3px 6px $shadow
+      #loading
+        height: 100vh
+        +fb(center, center)
+        color: $color1
+        h1
+          font-size: 5rem
     a
       color: $color1
       &:hover, &:focus, &:visited
