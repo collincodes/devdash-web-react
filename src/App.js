@@ -4,6 +4,7 @@ import './app.min.css';
 import { gitData } from './Data'
 import UserCard from './components/UserCard'
 import Repositories from './components/Repositories'
+import Links from './components/Links'
 
 class App extends Component {
   constructor(props) {
@@ -32,28 +33,29 @@ class App extends Component {
         <div>
           <h1 className="title">Development Dashboard UI</h1>
           <Route exact path="/" render={() => (
-              <main id="home">
-                <div className="one">
-                  <UserCard
-                    data={ user }
-                    />
-                </div>
-                <div className="two">
-                  <Repositories
-                    data={ user }
-                    />
-                </div>
-              </main>
-            )}/>
-            <Route path="/repos" render={() => (
-                <main id="repos">
-                  <div className="container">
+            <main id="home">
+              <div className="one">
+                <UserCard
+                  data={ user }
+                  />
+                <Links />
+              </div>
+              <div className="two">
+                <Repositories
+                  data={ user }
+                  />
+              </div>
+            </main>
+          )}/>
+          <Route path="/repos" render={() => (
+            <main id="repos">
+              <div className="container">
 
-                  </div>
-                </main>
-              )}/>
-            </div>
-          );
+              </div>
+            </main>
+          )}/>
+        </div>
+      );
     } else {
       return (
         <span>Loading...</span>
