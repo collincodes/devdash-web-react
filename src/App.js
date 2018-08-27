@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
+
+// styles
 import './app.min.css';
+
+// data import
 import { gitData } from './Data'
+
+// components defined
 import UserCard from './components/UserCard'
 import Repositories from './components/Repositories'
 import Links from './components/Links'

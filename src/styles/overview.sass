@@ -7,3 +7,44 @@
     border-bottom: 1px solid $shadow
   .overview
     padding: 2rem
+    .statistics
+      +fb(center, space-around)
+      & > *
+        width: 33.33%
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+        +fb(center, center)
+        li
+          +fb(center, flex-start)
+          flex-direction: column
+          font-weight: 300
+          width: 25%
+          .color
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 100%
+            margin: 0.5rem 0
+          &:nth-child(1)
+            .color
+              background-color: $color1
+          &:nth-of-type(2)
+            .color
+              background-color: $color2
+          &:nth-of-type(3)
+            .color
+              background-color: $color3
+          &:nth-of-type(4)
+            .color
+              background-color: $color4
+          .stat-bar
+            +fb(center, flex-end)
+            flex-direction: column
+          .label
+            font-size: 0.85rem
+      .statistic
+        text-align: center
+        font-weight: 300
+        .number
+          font-size: 2rem
