@@ -17,7 +17,7 @@ class Overview extends Component {
     let js = 0, html = 0, css = 0, python = 0, others = 0
     let languages = [] // array to store languages
     for (let repo of repos) {
-      if (repo.node.languages.edges.length > 0) {
+      if (repo.node.languages.edges.length > 0) { // eslint-disable-next-line
         repo.node.languages.edges.forEach( obj => { // map through language edges
           if (languages.indexOf( obj.node.name ) === -1 && languages.length <= 4) {
             languages.push( obj.node.name ) // languages array filled
@@ -36,7 +36,7 @@ class Overview extends Component {
               python += obj.size
               break;
             default:
-              return false
+              return others
           }
           totalBytes += obj.size // add to total 100%
         })
@@ -95,6 +95,10 @@ class Overview extends Component {
               <span className="number">{ commitNum }</span>
               <label>Commits</label>
             </div>
+          </div>
+          <div className="more">
+            <p className="js">JavaScript Frameworks: React & Ember</p>
+            <p className="css">CSS Preprocessors: SASS/SCSS & Stylus</p>
           </div>
         </div>
       </div>
