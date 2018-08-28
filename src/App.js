@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom'
 import './app.min.css';
 
 // data import
-import { gitData } from './Data'
+import { query } from './Data'
 
 // components defined
 import UserCard from './components/UserCard'
@@ -24,12 +24,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    gitData.call(this).then(res => {
+    setTimeout(() => {
       this.setState({
-        user: res.data.user,
+        user: query.data.user,
         hasFinished: true
-       })
-    })
+      })
+    }, 1500)
   }
 
 
