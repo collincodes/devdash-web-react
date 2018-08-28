@@ -1,6 +1,7 @@
 import { createApolloFetch } from 'apollo-fetch'
+require('dotenv').config({ path: '../.env'})
 
-const key = '8c9c548f272f945126691449d2e589014be74321'
+const key = process.env.REACT_APP_GITHUB_LOGIN
 const uri = 'https://api.github.com/graphql'
 const query = `{
   user(login: cmdeveloped) {
